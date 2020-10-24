@@ -11,12 +11,11 @@ export default function (app: Application): Model<any> {
   const schema = new mongooseClient.Schema(
     {
       email: { type: String, unique: true, lowercase: true },
-      password: { type: String },
-      role: { type: String, enum: ['admin', 'employer', 'student'] },
+      password: { type: String, required: true },
+      role: { type: String, enum: ['admin', 'employer', 'applicant'], required: true },
       firstName: { type: String, required: true },
       lastName: { type: String, required: true },
       phone: { type: String, required: false },
-      companyName: { type: String },
     },
     {
       timestamps: true,

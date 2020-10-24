@@ -1,3 +1,5 @@
+import { Hook, HookContext } from '@feathersjs/feathers';
+import { alterItems } from 'feathers-hooks-common';
 
 export default {
   before: {
@@ -7,7 +9,7 @@ export default {
     create: [],
     update: [],
     patch: [],
-    remove: []
+    remove: [],
   },
 
   after: {
@@ -17,7 +19,7 @@ export default {
     create: [],
     update: [],
     patch: [],
-    remove: []
+    remove: [],
   },
 
   error: {
@@ -27,6 +29,14 @@ export default {
     create: [],
     update: [],
     patch: [],
-    remove: []
-  }
+    remove: [],
+  },
 };
+
+// function setScores(): Hook {
+//   return async (context: HookContext) => {
+//     const { data} = context
+
+//     return context
+//   };
+// }

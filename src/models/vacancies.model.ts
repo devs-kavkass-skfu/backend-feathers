@@ -13,6 +13,7 @@ export default function (app: Application): Model<any> {
     {
       name: { type: String, required: true },
       description: { type: String, required: true },
+      specialization: { type: [String], required: true },
       companyName: { type: String, required: true },
       occupationType: {
         type: String,
@@ -21,10 +22,10 @@ export default function (app: Application): Model<any> {
       },
       skills: { type: [String], required: true },
       contactInfo: { type: String, required: true },
-      timeOfDay: { type: String, enum: ['day', 'evening'] },
       salaryFrom: { type: String },
       salaryTo: { type: String },
-      jobLocation: { type: [String], required: true },
+      jobLocations: { type: [String], default: [] },
+      userId: { type: Schema.Types.ObjectId, ref: 'Users', required: true },
     },
     {
       timestamps: true,
