@@ -16,6 +16,7 @@ export default function (app: Application): Model<any> {
       firstName: { type: String, required: true },
       lastName: { type: String, required: true },
       phone: { type: String, required: false },
+      companyName: { type: String, required: false },
     },
     {
       timestamps: true,
