@@ -1,11 +1,9 @@
-import { setField } from 'feathers-authentication-hooks';
-
 export default {
   before: {
     all: [],
     find: [],
     get: [],
-    create: [setField({ from: 'params.user.id', as: 'params.query.id' })],
+    create: [],
     update: [],
     patch: [],
     remove: [],

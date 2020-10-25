@@ -11,9 +11,8 @@ export default function (app: Application): Model<any> {
   const { Schema } = mongooseClient;
   const schema = new Schema(
     {
-      name: { type: String, required: true },
+      specialization: { type: String, required: true },
       description: { type: String, required: true },
-      specialization: { type: [String], required: true },
       companyName: { type: String, required: true },
       occupationType: {
         type: String,
@@ -24,8 +23,7 @@ export default function (app: Application): Model<any> {
       contactInfo: { type: String, required: true },
       salaryFrom: { type: String },
       salaryTo: { type: String },
-      jobLocations: { type: [String], default: [] },
-      userId: { type: Schema.Types.ObjectId, ref: 'Users', required: true },
+      jobLocation: { type: String },
     },
     {
       timestamps: true,

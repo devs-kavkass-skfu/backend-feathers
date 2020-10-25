@@ -28,6 +28,10 @@ export default function (app: Application): Model<any> {
       experienceInfo: { type: String },
       languages: { type: [String], default: [] },
       achievements: { type: [String], defualt: [] },
+      volunteerExperience: { type: String },
+      occupationType: { type: String, enum: ['full', 'part', 'project', 'intern'] },
+      isRemote: { type: Boolean, default: false },
+      personalSkills: { type: String },
       score: { type: Number, default: 0 },
     },
     {
